@@ -33,12 +33,19 @@ public class GameTest {
 	/*User story 1 START*/
 	@Test
 	public void frameTest() {
-		game.roll(2,4, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
-		assertThat(game.score(), is(6));
+		game.roll(2,4);
 	}
 	/*User story 1 END*/
+	
+	/*User story 2 START*/
+	@Test
+	public void frameScoreTest() {
+		game.roll(2,6);
+		assertThat(game.score(), is(8));
+	}
+	/*User story 2 END*/
 
-	/*User story 6 START, recgognize spare and game with spare*/
+	/*User story 6 START*/
 	@Test
 	public void MakeSpareTest() {
 		game.roll(5,5, 3,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
