@@ -162,4 +162,12 @@ public class GameTest {
 	}
 	/*User story 13 END*/
 	
+	/*User story 14 START*/
+	@Test
+	public void GameTestScore() {
+		game.roll(6,3, 7,1, 8,2, 7,2, 10, 6,2, 7,3, 10, 8,0, 7,3, 10);
+		assertThat(game.score(), is(135));
+	}
+	/*User story 14 END*/
+	
 }
