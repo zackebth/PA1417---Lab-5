@@ -59,6 +59,14 @@ public class GameTest {
 		assertThat(game.score(), is(81));
 	}
 	/*User story 4 END*/
+	
+	/*User story 5 START*/
+	@Test
+	public void MakeStrikeTest() {
+		game.roll(10, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
+		assertThat(game.score(), is(22));
+	}
+	/*User story 5 END*/
 
 	/*User story 6 START*/
 	@Test
