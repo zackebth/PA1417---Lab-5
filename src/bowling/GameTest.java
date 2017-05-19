@@ -110,6 +110,13 @@ public class GameTest {
 	}
 	/*User story 8 END*/
 	
+	/*User story 9 START*/
+	@Test
+	public void GameWithMultiSpares() {
+		game.roll(8,2, 5,5, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,6);
+	}
+	/*User story 9 END*/
+	
 	/*User story 13 START*/
 	@Test
 	public void PerfectGameTest() {
