@@ -131,6 +131,21 @@ public class GameTest {
 	}
 	/*User story 10 END*/
 	
+	/*User story 11 START*/
+	@Test
+	public void StrikeLastFrameTest() {
+		game.roll(0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 10, 7,2);
+		assertThat(game.score(), is(19));
+	}
+	
+	@Test
+	public void StrikeLastFrameGameTest() {
+		game.roll(1,5, 3,6, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 10, 7,2);
+		assertThat(game.score(), is(92));
+	}
+	
+	/*User story 11 END*/
+
 	/*User story 13 START*/
 	@Test
 	public void PerfectGameTest() {
