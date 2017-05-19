@@ -82,6 +82,20 @@ public class GameTest {
 	}
 	/*User story 6 END*/
 	
+	/*User story 7 START*/
+	@Test
+	public void StrikeAndSpareTest() {
+		game.roll(10, 4,6, 7,2, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
+		assertThat(game.score(), is(46));
+	}
+	
+	@Test
+	public void StrikeAndSpareGameTest() {
+		game.roll(10, 4,6, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,6);
+		assertThat(game.score(), is(103));
+	}
+	/*User story 7 END*/
+	
 	/*User story 13 START*/
 	@Test
 	public void PerfectGameTest() {
