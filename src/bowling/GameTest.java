@@ -145,6 +145,14 @@ public class GameTest {
 	}
 	
 	/*User story 11 END*/
+	
+	/*User story 12 START*/
+	@Test
+	public void StrikeBonusTest() {
+		game.roll(1,5, 3,6, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,8, 10);
+		assertThat(game.score(), is(93));
+	}
+	/*User story 12 END*/
 
 	/*User story 13 START*/
 	@Test
