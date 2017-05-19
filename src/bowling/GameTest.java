@@ -117,6 +117,20 @@ public class GameTest {
 	}
 	/*User story 9 END*/
 	
+	/*User story 10 START*/
+	@Test
+	public void SpareLastFrameTest() {
+		game.roll(0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 2,8, 7);
+		assertThat(game.score(), is(17));
+	}
+	
+	@Test
+	public void SpareLastFrameGameTest() {
+		game.roll(1,5, 3,6, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,8, 7);
+		assertThat(game.score(), is(90));
+	}
+	/*User story 10 END*/
+	
 	/*User story 13 START*/
 	@Test
 	public void PerfectGameTest() {
