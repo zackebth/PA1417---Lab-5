@@ -96,6 +96,20 @@ public class GameTest {
 	}
 	/*User story 7 END*/
 	
+	/*User story 8 START*/
+	@Test
+	public void MultiStrikes() {
+		game.roll(10, 10, 7,2, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
+		assertThat(game.score(), is(55));
+	}
+	
+	@Test
+	public void GameWithMultiStrike() {
+		game.roll(10, 10, 7,2, 3,6, 4,4, 5,3, 3,3, 4,5, 8,1, 2,6);
+		assertThat(game.score(), is(112));
+	}
+	/*User story 8 END*/
+	
 	/*User story 13 START*/
 	@Test
 	public void PerfectGameTest() {
