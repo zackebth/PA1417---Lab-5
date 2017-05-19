@@ -82,4 +82,12 @@ public class GameTest {
 	}
 	/*User story 6 END*/
 	
+	/*User story 13 START*/
+	@Test
+	public void PerfectGameTest() {
+		game.roll(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+		assertThat(game.score(), is(300));
+	}
+	/*User story 13 END*/
+	
 }
